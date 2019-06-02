@@ -1,0 +1,53 @@
+#usda 1.0
+(
+    defaultPrim = "Fighter_Scene"
+)
+
+def "Fighter_Scene" (
+    kind = "component"
+    assetInfo = {
+        asset identifier = @Fighter_Scene.usd@
+        string name = "Fighter_Scene"
+    }
+    prepend inherits = </_class_Fighter_Scene>
+    prepend references = [
+    @./LD/Fighter_Variant_1.usda@</Fighter_Scene>,
+    @./LD/Fighter_Variant_2.usda@</Fighter_Scene>,
+    @./LD/Fighter_Variant_3.usda@</Fighter_Scene>,
+    @./LD/Fighter_Variant_4.usda@</Fighter_Scene>
+    ]
+    kind = "component"
+    variants = {
+        string Fighter_Types = "Fighter_Variant_1"
+    }
+    prepend variantSets = "Fighter_Types"
+)
+{
+    variantSet "Fighter_Types" = {
+        "Fighter_Variant_1" (
+            payload = @./LD/Fighter_Variant_1.usda@
+        ) {
+
+        }
+        "Fighter_Variant_2" (
+            payload = @./LD/Fighter_Variant_2.usda@
+        ) {
+
+        }
+        "Fighter_Variant_3" (
+            payload = @./LD/Fighter_Variant_3.usda@
+        ) {
+
+        }
+        "Fighter_Variant_4" (
+            payload = @./LD/Fighter_Variant_4.usda@
+        ) {
+
+        }
+    }
+}
+
+class "_class_Fighter_Scene"
+{
+}
+
