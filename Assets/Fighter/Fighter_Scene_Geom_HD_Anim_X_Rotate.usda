@@ -1,0 +1,23 @@
+#usda 1.0
+(
+    "Step 3: Adding Rotate X animation"
+    endTimeCode = 500
+    startTimeCode = 0
+)
+
+def Xform "Fighter_Scene" (
+    prepend references = @./Fighter_Scene_Geom_HD.usd@
+)
+{
+    float xformOp:rotateX:spin.timeSamples = {
+        0: 0,
+        28: 10,
+        71: 22,
+        160: -23,
+        302: 20,
+        400: -12,
+        500: 0,
+    }
+    uniform token[] xformOpOrder = ["xformOp:rotateX:spin"]
+}
+

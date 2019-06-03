@@ -10,7 +10,7 @@ def "Fighter_Scene" (
         string name = "Fighter_Scene"
     }
     prepend inherits = </_class_Fighter_Scene>
-
+    prepend references = @./Fighter_Scene_Geom.usd@
     kind = "component"
     variants = {
         string Fighter_Types = "Fighter_Variant_1"
